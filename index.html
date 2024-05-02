@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="retro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StarGate</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+   <!-- dialog for number of players, water supply, players names -->
+   <div id="playerSetupDialog" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>How many players? (1-4)</p>
+      <input type="number" id="numPlayers" min="1" max="4">
+      <p>Enter primary water supply:</p>
+      <input type="number" id="primaryWaterSupply" min="1" max="6"> 
+      <button id="confirmPlayers">OK</button>
+      <div id="playerNamesInputs"></div>
+    </div>
+  </div>
+
+
+  <div id="game-area">
+    <!-- Container for player and found items cards -->
+    <div id="sidebar">
+      <div id="players-container">
+      </div>
+      <div id="found-items"></div>
+    </div>
+
+    <!-- game table -->
+    <div id="table-container">
+      <table></table>
+    </div>
+  </div>
+  
+  <!-- winnning dialog -->
+  <div id="winModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Congratulations, you've won the game!</p>
+    </div>
+  </div>
+
+  <!-- losing dialog -->
+<div id="loseModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <p>You lost the game</p>
+  </div>
+</div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+
+
+  table {
+    margin-top: 20px;
+    border-collapse: separate; /* This is changed to separate to use border-spacing */
+    border-spacing: 10px; /* This creates the spacing between cells */
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  table td {
+    background-color: #d9b382; 
+    border-radius: 8px; /* Rounded corners */
+    width: 200px;
+    height: 120px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 1%; /* Adjust if needed */
+    position: relative;
+  }
+  
+  img {
+    max-width: 100%; /* Image will take up the full width of the cell */
+    height: auto; /* Height will scale automatically */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+  }
+  
+  body{
+    background-color: bisque;
+  }
+  
+  .player-img {
+    position: absolute; /* Absolutely position the player image */
+    bottom: 0; /* Align the player image to the bottom of the cell */
+    left: 50%; /* Center the player image horizontally */
+    transform: translateX(-50%); /* Offset by half its width to truly center it */
+    z-index: 10; /* Ensure the player appears above the Stargate */
+  }
+  
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #d9b382;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 8px;
+  width: 60%; 
+}
+
+/* The Close Button */
+.close {
+  color: #ffffff;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#players-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px; /* Adds space between the cards */
+  margin: 20px; /* Space around the container */
+}
+
+.player-card {
+  background: #f3eacb;
+  border: 1px solid #d3c295;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  width: 200px; /* Adjust as necessary */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional: Adds a subtle shadow for depth */
+  font-size: large;
+}
+
+.stats {
+  display: flex;
+  align-items: center;
+}
+
+
+.player-card .player-name {
+  color: brown;
+  font-weight: bolder;
+  margin-bottom: 15px;
+  text-align: center; /* Center the player's name */
+}
+
+/* Styles for your icons specifically */
+.icon {
+  width: 20px; 
+  height:auto; 
+  margin:30px
+}
+
+
+/* Add media query if needed for responsive design */
+@media (max-width: 600px) {
+  #players-container {
+    flex-direction: column;
+  }
+}
+
+.active-player {
+  border: 2px solid #4CAF50; 
+  background-color: #b4e3b7;
+}
+
+#found-items {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.found-items-card {
+  background: #f3eacb;
+  border: 1px solid #d3c295;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  font-size: large;
+}
+
+.found-item-icon {
+  width: 40px; /* Adjust as necessary */
+  height: auto;
+  margin: 5px;
+}
+
+#game-area {
+  display: flex;
+}
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 0 0 auto; /* Do not grow, do not shrink, auto basis */
+  width: 400px; /* or whatever width you want for the sidebar */
+}
+
+#table-container {
+  flex: 1; /* Will take up the rest of the space */
+  /* You can remove the flex-grow property if you use flex: 1 */
+}
+
